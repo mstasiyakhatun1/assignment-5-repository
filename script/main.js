@@ -65,15 +65,12 @@ titles.forEach((item) => {
   item.children[3].children[1].addEventListener("click", function () {
     const date = new Date();
 
-    const formattedDateAndTime = date.toLocaleDateString(undefined, {
-      weekday: "long",
-      day: "numeric",
-      month: "long",
-      year: "numeric",
-      minute: "2-digit",
-      hour: "2-digit",
-      second: "2-digit",
-    });
+const formattedTime = date.toLocaleTimeString(undefined, {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit"
+});
+
 
     const newElement = document.createElement("div");
     const newParagraph = document.createElement("p");
@@ -81,7 +78,7 @@ titles.forEach((item) => {
     const newTitle = document.createElement("h2");
     newTitle.innerText = getTitle;
     newParagraph.innerText = `You have Complete The Task Add Dark Mode at`;
-    dateElement.innerText = formattedDateAndTime;
+    dateElement.innerText = formattedTime;
     newTitle.className = "text-[18px] font-medium text-blue-600";
     newElement.className = "text-left bg-[#F4F7FF] p-2 rounded-xl w-full mt-2";
     dateElement.className = "text-[14px] mt-1 text-blue-400";
