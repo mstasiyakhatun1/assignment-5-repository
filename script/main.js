@@ -17,11 +17,11 @@ for (const button of buttons) {
   button.addEventListener("click", function (event) {
     totalCount += 1;
     event.preventDefault();
-    alert("Bard update successfully.");
+    alert("Board update successfully.");
     this.disabled = true;
 
     if (totalCount === 6) {
-      alert("done");
+      alert("congrates!!! You have completed all the current task");
     }
   });
 }
@@ -80,7 +80,7 @@ titles.forEach((item) => {
     const dateElement = document.createElement("span");
     const newTitle = document.createElement("h2");
     newTitle.innerText = getTitle;
-    newParagraph.innerText = `dolor sit, amet consectetur adipisicing elit. Deserunt repudiandae e`;
+    newParagraph.innerText = `You have Complete The Task Add Dark Mode at`;
     dateElement.innerText = formattedDateAndTime;
     newTitle.className = "text-[18px] font-medium text-blue-600";
     newElement.className = "text-left bg-[#F4F7FF] p-2 rounded-xl w-full mt-2";
